@@ -3,6 +3,23 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
+  width: 20%;
+
+  & > div {
+    cursor: pointer;
+  }
+
+  & > svg {
+    cursor: pointer;
+  }
+`;
+
+export const UserContainerIcon = styled.div`
+  display: flex;
   align-items: center;
-  width: 10%;
+`;
+
+export const UserNameGreeting = styled.p`
+  font-size: 1.1rem;
+  margin: 0 10px;
 `;

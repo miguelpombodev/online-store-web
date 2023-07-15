@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: space-around;
   padding: 8px;
   width: 55%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 `;
 
 export const Input = styled.input`
