@@ -7,5 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Teko', sans-serif
   }
+
+  main {
+    padding: 40px 0;
+  }
   
 `;
