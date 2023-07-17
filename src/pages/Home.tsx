@@ -4,6 +4,7 @@ import { SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
 import { ProductGallery } from "../components/ProductGallery";
+import { StaticBanner } from "../components/StaticBanner";
 
 const carouselBannersConfig: SwiperOptions = {
   slidesPerView: 1,
@@ -36,6 +37,10 @@ export function Home() {
         ))}
       </Carousel>
       <ProductGallery />
+      <StaticBanner
+        URI="https://static.zattini.com.br/bnn/l_zattini/2023-06-15/3231_1306x350_full2_generica_230614.gif"
+        imgTitle="Outlet Banner"
+      />
     </main>
   );
 }
