@@ -3,7 +3,7 @@ import { MdSearch } from "react-icons/md";
 
 export const Container = styled.div`
   align-items: center;
-  background-color: ${({ theme }) => theme.COLORS.WHITE};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_100};
   border-radius: 4px;
   display: flex;
   justify-content: space-around;
@@ -13,8 +13,10 @@ export const Container = styled.div`
 `;
 
 export const Input = styled.input`
+  background-color: ${({ theme }) => theme.COLORS.GRAY_100};
+
   border: none;
-  border-right: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
+  border-right: 1px solid ${({ theme }) => theme.COLORS.GRAY_200};
   font-size: 1rem;
   height: 30px;
   outline: none;

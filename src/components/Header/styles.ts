@@ -4,7 +4,7 @@ export const Container = styled.header`
   display: flex;
   flex-direction: column;
 
-  background-color: ${(props) => props.theme.COLORS.GRAY_100};
+  background-color: ${(props) => props.theme.COLORS.WHITE};
 `;
 
 export const MainContentContainer = styled.div`

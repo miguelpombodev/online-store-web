@@ -1,38 +1,39 @@
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import { Container, SlideImage } from "./style";
+import { ReactNode } from "react";
+import { Swiper, useSwiper } from "swiper/react";
+import { SwiperOptions } from "swiper/types";
+import * as S from "./style";
 
 import "swiper/css";
 
-export function Carousel() {
-  const [items, setItems] = useState([
-    {
-      url: "https://static.netshoes.com.br/bnn/l_netshoes/2023-06-30/9940_2006_NS_PROMO_1920X504_CAMPANHA_EXCLUSIVA.gif",
-    },
-    {
-      url: "https://static.netshoes.com.br/bnn/l_netshoes/2023-07-13/4031_full_desk.jpg",
-    },
-  ]);
+interface CarouselProps {
+  children: ReactNode;
+  config: SwiperOptions;
+}
+
+export function Carousel({ children, config }: CarouselProps) {
+  const swiper = useSwiper();
 
   return (
-    <Container>
-      <Swiper
-        slidesPerView={1}
-        autoplay={{
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        loop={true}
-        speed={1000}
-        modules={[Autoplay]}
-      >
-        {items.map((item) => (
-          <SwiperSlide>
-            <SlideImage src={item.url} />
-          </SwiperSlide>
-        ))}
+    <S.Container>
+      <Swiper {...config}>
+        {children}
+        {config.navigation && (
+          <S.SwiperNavButtons>
+            <S.SwiperButton
+              className="swiper-button-prev"
+              onClick={() => swiper.slidePrev()}
+            >
+              Prev
+            </S.SwiperButton>
+            <S.SwiperButton
+              className="swiper-button-next"
+              onClick={() => swiper.slideNext()}
+            >
+              Next
+            </S.SwiperButton>
+          </S.SwiperNavButtons>
+        )}
       </Swiper>
-    </Container>
+    </S.Container>
   );
 }

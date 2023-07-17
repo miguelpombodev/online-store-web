@@ -11,6 +11,15 @@ export const Container = styled.section`
   }
 `;
 
-export const SlideImage = styled.img`
-  /* width: 25vw; */
+export const SwiperNavButtons = styled.div``;
+
+export const SwiperButton = styled.button`
+  cursor: pointer;
+  border-radius: 100%;
+  border: none;
+  width: 50px;
+  height: 50px;
+  color: ${({ theme }) => theme.COLORS.WHITE};
+  background-color: ${({ theme }) => theme.COLORS.DEFAULT_ORANGE};
+  z-index: 1;
 `;

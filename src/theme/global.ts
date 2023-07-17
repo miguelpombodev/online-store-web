@@ -10,6 +10,17 @@ export const GlobalStyle = createGlobalStyle`
 
   main {
     padding: 40px 0;
+    background-color: #E1E1E6;
   }
-  
+
+  .swiper-button-next {
+  position: absolute;
+  top: 40%;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
 `;
