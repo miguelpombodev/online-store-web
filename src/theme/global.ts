@@ -16,11 +16,11 @@ export const GlobalStyle = createGlobalStyle`
   .swiper-button-next {
   position: absolute;
   top: 40%;
+  right: 0%;
 }
 
 .swiper-button-prev {
   position: absolute;
   top: 40%;
-  right: 0%;
 }
 `;
