@@ -5,6 +5,7 @@ import { Carousel } from "../Carousel";
 import { SwiperSlide } from "swiper/react";
 import { ProductCard } from "../ProductCard";
 import { A11y, Navigation, Pagination } from "swiper/modules";
+import { Product } from "../../Models/Products/product.interface";
 
 const carouselProductsConfig: SwiperOptions = {
   slidesPerView: 5,
@@ -17,18 +18,18 @@ const carouselProductsConfig: SwiperOptions = {
   modules: [Navigation, A11y, Pagination],
 };
 
-export function ProductGallery() {
-  const [products, setProducts] = useState([
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 22, 22, 22, 22,
-  ]);
+interface ProductGalleryProps {
+  products: Array<Product>;
+}
 
+export function ProductGallery({ products }: ProductGalleryProps) {
   return (
     <S.Container>
       <S.Title>You might like'em</S.Title>
       <Carousel config={carouselProductsConfig}>
         {products.map((prod) => (
-          <SwiperSlide>
-            <ProductCard />
+          <SwiperSlide key={prod.id}>
+            <ProductCard product={prod} />
           </SwiperSlide>
         ))}
       </Carousel>

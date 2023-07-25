@@ -75,20 +75,20 @@ export function Footer() {
       <S.FooterOptions>
         <S.FooterItemsContainer>
           <S.FooterItemsTitle>Institucional</S.FooterItemsTitle>
-          {items.Institucional.map((instItems) => (
-            <S.FooterItems>{instItems.title}</S.FooterItems>
+          {items.Institucional.map((instItems, idx) => (
+            <S.FooterItems key={idx}>{instItems.title}</S.FooterItems>
           ))}
         </S.FooterItemsContainer>
         <S.FooterItemsContainer>
           <S.FooterItemsTitle>Help</S.FooterItemsTitle>
-          {items.Help.map((helpItems) => (
-            <S.FooterItems>{helpItems.title}</S.FooterItems>
+          {items.Help.map((helpItems, idx) => (
+            <S.FooterItems key={idx}>{helpItems.title}</S.FooterItems>
           ))}
         </S.FooterItemsContainer>
         <S.FooterItemsContainer>
           <S.FooterItemsTitle>Social</S.FooterItemsTitle>
-          {items.Social.map((socialItems) => (
-            <S.FooterItems>{socialItems.title}</S.FooterItems>
+          {items.Social.map((socialItems, idx) => (
+            <S.FooterItems key={idx}>{socialItems.title}</S.FooterItems>
           ))}
         </S.FooterItemsContainer>
       </S.FooterOptions>

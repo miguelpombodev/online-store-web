@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Swiper, useSwiper } from "swiper/react";
 import { SwiperOptions } from "swiper/types";
 import * as S from "./style";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 import "swiper/css";
 
@@ -23,13 +24,13 @@ export function Carousel({ children, config }: CarouselProps) {
               className="swiper-button-prev"
               onClick={() => swiper.slidePrev()}
             >
-              Prev
+              <FiArrowLeft />
             </S.SwiperButton>
             <S.SwiperButton
               className="swiper-button-next"
               onClick={() => swiper.slideNext()}
             >
-              Next
+              <FiArrowRight />
             </S.SwiperButton>
           </S.SwiperNavButtons>
         )}

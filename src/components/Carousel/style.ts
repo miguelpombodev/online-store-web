@@ -14,12 +14,15 @@ export const Container = styled.section`
 export const SwiperNavButtons = styled.div``;
 
 export const SwiperButton = styled.button`
-  cursor: pointer;
+  align-items: center;
+  background-color: ${({ theme }) => theme.COLORS.DEFAULT_ORANGE};
   border-radius: 100%;
   border: none;
-  width: 50px;
-  height: 50px;
   color: ${({ theme }) => theme.COLORS.WHITE};
-  background-color: ${({ theme }) => theme.COLORS.DEFAULT_ORANGE};
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
   z-index: 1;
 `;

@@ -1,22 +1,28 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.WHITE};
-  border-radius: 8px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
+  min-height: 380px;
   width: 250px;
 `;
 
-export const ProductImage = styled.img``;
+export const ProductImage = styled.img`
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+`;
 
 export const ProductInfoContainer = styled.div`
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   border-top: 1px solid ${({ theme }) => theme.COLORS.GRAY_200};
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 `;
 
 export const Price = styled.p`

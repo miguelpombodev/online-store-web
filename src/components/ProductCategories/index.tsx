@@ -13,8 +13,8 @@ export function ProductCategories() {
 
   return (
     <CategoriesNav>
-      {categories.map((category) => (
-        <CategoryItem>{category}</CategoryItem>
+      {categories.map((category, idx) => (
+        <CategoryItem key={idx}>{category}</CategoryItem>
       ))}
     </CategoriesNav>
   );
