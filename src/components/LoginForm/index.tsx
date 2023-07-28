@@ -17,8 +17,6 @@ export function LoginForm() {
   const navigate = useNavigate();
 
   const handleOnSubmit = async ({ email, password }: IHandleLoginProps) => {
-    console.log("chamou");
-
     await handleLogin({ email, password });
     navigate(-1);
   };

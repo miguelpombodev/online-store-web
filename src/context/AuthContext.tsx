@@ -21,7 +21,6 @@ export function AuthProvider({ children }: IAuthProviderProps) {
       });
 
       setAuthenticated(true);
-      console.log("AuthContext", authenticated);
 
       sessionStorage.setItem("LitShade:user", JSON.stringify(data));
     } catch (error) {
