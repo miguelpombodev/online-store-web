@@ -7,6 +7,7 @@ import { ProductGallery } from "../components/ProductGallery";
 import { StaticBanner } from "../components/StaticBanner";
 import { api } from "../lib/axios";
 import { Product } from "../Models/Products/product.interface";
+import { Main } from "../components/Main";
 
 const carouselBannersConfig: SwiperOptions = {
   slidesPerView: 1,
@@ -32,15 +33,11 @@ export function Home() {
   const [productsGallery, setProductsGallery] = useState<Product[]>([]);
 
   async function loadProductsGallery() {
-    const response: Product = await api.get("/products", {
-      headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_BEARER_TOKEN}`,
-      },
+    const response = await api.get<Product[]>("/products", {
       params: {
         orderBy: "asc",
       },
     });
-    console.log(response.data);
     setProductsGallery(response.data);
   }
 
@@ -50,10 +47,10 @@ export function Home() {
   }, []);
 
   return (
-    <main>
+    <Main>
       <Carousel config={carouselBannersConfig}>
-        {items.map((item) => (
-          <SwiperSlide>
+        {items.map((item, idx) => (
+          <SwiperSlide key={idx}>
             <img src={item.url} />
           </SwiperSlide>
         ))}
@@ -63,6 +60,6 @@ export function Home() {
         URI="https://static.zattini.com.br/bnn/l_zattini/2023-06-15/3231_1306x350_full2_generica_230614.gif"
         imgTitle="Outlet Banner"
       />
-    </main>
+    </Main>
   );
 }
