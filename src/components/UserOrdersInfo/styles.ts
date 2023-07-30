@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -14,7 +15,7 @@ export const Container = styled.div`
   }
 `;
 
-export const UserContainerIcon = styled.div`
+export const UserContainerIcon = styled(Link)`
   display: flex;
   align-items: center;
 `;

@@ -14,6 +14,4 @@ export const MainContentContainer = styled.div`
   padding: 25px 200px;
 `;
 
-export const Title = styled.h1``;
-
 export const CategoriesContainer = styled.div``;

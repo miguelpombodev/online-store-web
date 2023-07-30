@@ -1,18 +1,14 @@
 import { ProductCategories } from "../ProductCategories";
 import { SearchInput } from "../SearchInput";
 import { UserOrdersInfo } from "../UserOrdersInfo";
-import {
-  CategoriesContainer,
-  Container,
-  MainContentContainer,
-  Title,
-} from "./styles";
+import { CategoriesContainer, Container, MainContentContainer } from "./styles";
+import { Logo } from "../Logo";
 
 export function Header() {
   return (
     <Container>
       <MainContentContainer>
-        <Title>LitShade🔥</Title>
+        <Logo />
         <SearchInput />
         <UserOrdersInfo />
       </MainContentContainer>

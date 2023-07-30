@@ -8,6 +8,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Teko', sans-serif
   }
 
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
   main {
     padding: 40px 0;
     background-color: #E1E1E6;

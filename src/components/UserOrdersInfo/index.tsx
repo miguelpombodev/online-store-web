@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Container, UserContainerIcon, UserNameGreeting } from "./styles";
 import {
   AiOutlineUser,
@@ -13,12 +12,10 @@ export function UserOrdersInfo() {
 
   return (
     <Container>
-      <UserContainerIcon>
-        <Link to={authenticated ? "/profile" : "/login"}>
-          <AiOutlineUser size={25} />
-          <UserNameGreeting>Hello Teste</UserNameGreeting>
-          <AiOutlineDown size={13} />
-        </Link>
+      <UserContainerIcon to={authenticated ? "/profile" : "/login"}>
+        <AiOutlineUser size={25} />
+        <UserNameGreeting>Hello Teste</UserNameGreeting>
+        <AiOutlineDown size={13} />
       </UserContainerIcon>
       <AiOutlineShoppingCart size={25} />
       <AiOutlineHeart size={25} />
