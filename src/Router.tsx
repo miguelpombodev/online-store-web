@@ -9,7 +9,7 @@ export function Router() {
     <div
       style={{
         display: "flex",
-        flexDirection: "column",
+        flexFlow: "column nowrap",
         minHeight: "100vh",
       }}
     >

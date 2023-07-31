@@ -1,6 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { UserProfileOptions } from "../components/UserProfileOptions";
+import { Main } from "../components/Main";
 
 export function UserProfile() {
   const { authenticated } = useAuth();
@@ -9,5 +10,9 @@ export function UserProfile() {
     return <Navigate to="/login" />;
   }
 
-  return <UserProfileOptions />;
+  return (
+    <Main>
+      <UserProfileOptions />
+    </Main>
+  );
 }
