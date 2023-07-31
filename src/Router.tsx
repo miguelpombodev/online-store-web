@@ -17,9 +17,9 @@ export function Router() {
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
             <Route path="profile" element={<UserProfile />} />
           </Route>
+          <Route path="login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -28,6 +28,9 @@ export function Home() {
     {
       url: "https://static.netshoes.com.br/bnn/l_netshoes/2023-07-13/4031_full_desk.jpg",
     },
+    {
+      url: "https://static.netshoes.com.br/bnn/l_netshoes/2023-07-21/8947_elas.gif",
+    },
   ]);
 
   const [productsGallery, setProductsGallery] = useState<Product[]>([]);

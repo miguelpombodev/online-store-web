@@ -3,7 +3,11 @@ import { Main } from "../components/Main";
 
 export function Login() {
   return (
-    <Main>
+    <Main
+      style={{
+        padding: 0,
+      }}
+    >
       <LoginForm />
     </Main>
   );
