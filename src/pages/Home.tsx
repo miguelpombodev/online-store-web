@@ -6,7 +6,7 @@ import { SwiperOptions } from "swiper/types";
 import { ProductGallery } from "../components/ProductGallery";
 import { StaticBanner } from "../components/StaticBanner";
 import { api } from "../lib/axios";
-import { Product } from "../Models/Products/product.interface";
+import { Product } from "../models/Products/product.interface";
 import { Main } from "../components/Main";
 
 const carouselBannersConfig: SwiperOptions = {

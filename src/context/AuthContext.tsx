@@ -1,8 +1,8 @@
 import { ReactNode, createContext, useState } from "react";
-import { IAuthContext } from "../Models/Context/AuthContext/IAuthContext.interface";
-import { IHandleLoginProps } from "../Models/Context/AuthContext/IHandleLoginProps.interface";
+import { IAuthContext } from "../models/Context/AuthContext/IAuthContext.interface";
+import { IHandleLoginProps } from "../models/Context/AuthContext/IHandleLoginProps.interface";
 import { api } from "../lib/axios";
-import { ILoginProps } from "../Models/Context/AuthContext/ILoginProps.interface";
+import { ILoginProps } from "../models/Context/AuthContext/ILoginProps.interface";
 import { useContext } from "react";
 
 type IAuthProviderProps = {

@@ -5,7 +5,7 @@ import { Carousel } from "../Carousel";
 import { SwiperSlide } from "swiper/react";
 import { ProductCard } from "../ProductCard";
 import { A11y, Navigation, Pagination } from "swiper/modules";
-import { Product } from "../../Models/Products/product.interface";
+import { Product } from "../../models/Products/product.interface";
 
 const carouselProductsConfig: SwiperOptions = {
   slidesPerView: 5,

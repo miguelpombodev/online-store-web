@@ -1,4 +1,4 @@
-import { Product } from "../../Models/Products/product.interface";
+import { Product } from "../../models/Products/product.interface";
 import currencyFormatter from "../../utils/currencyFormatter";
 import * as S from "./styles";
 interface ProductCardProps {

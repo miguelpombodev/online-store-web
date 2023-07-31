@@ -13,12 +13,48 @@ export default function (plop) {
       {
         type: "add",
         path: "../src/components/{{pascalCase name}}/index.tsx",
-        templateFile: "templates/index.tsx.hbs",
+        templateFile: "templates/components/index.tsx.hbs",
       },
       {
         type: "add",
         path: "../src/components/{{pascalCase name}}/styles.tsx",
-        templateFile: "templates/styles.ts.hbs",
+        templateFile: "templates/components/styles.ts.hbs",
+      },
+    ],
+  });
+
+  plop.setGenerator("page", {
+    description: "application page",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "Type page name please",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "../src/pages/{{pascalCase name}}.tsx",
+        templateFile: "templates/pages/page.tsx.hbs",
+      },
+    ],
+  });
+
+  plop.setGenerator("interface", {
+    description: "application model interface",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "Type interface name please",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "../src/models/{{pascalCase name}}/{{camelCase name}}.interface.ts",
+        templateFile: "templates/models/model.interface.ts.hbs",
       },
     ],
   });

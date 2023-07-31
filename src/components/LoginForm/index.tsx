@@ -2,7 +2,7 @@
 import * as S from "./styles";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext";
-import { IHandleLoginProps } from "../../Models/Context/AuthContext/IHandleLoginProps.interface";
+import { IHandleLoginProps } from "../../models/Context/AuthContext/IHandleLoginProps.interface";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../Button";
 
